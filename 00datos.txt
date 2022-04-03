@@ -1,0 +1,6 @@
+Integrantes de la pareja:
+Andrés Ortega Martínez
+Borja Rodríguez Soto
+
+Mejoras:
+Mejora CSS
