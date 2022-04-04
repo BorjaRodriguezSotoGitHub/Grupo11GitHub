@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../assets/css/TicTacToe.css';
+import '../../assets/css/Quiz.css';
 import {Button, Table} from 'react-bootstrap';
 import frontimagees from '../../assets/images/frontpatin.jpg';
 
