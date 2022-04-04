@@ -177,7 +177,7 @@ export default function Header(props) {
         <Table striped bordered hover variant="dark">
         <thead>
           <tr>
-            <th>Bicicleta ID</th>
+            <th>Patinete ID</th>
             <th>Localización</th>
             <th>Estado</th>
             <th>Reservar</th>
@@ -189,36 +189,36 @@ export default function Header(props) {
             <td>1</td>
             <td>Calle Gran Via Nº12</td>
             <td>{estado1}</td>
-            <td><Button variant="light" onClick={reservar1} className={alquilado1 === "true" ? "no-clickable" : "clickable"}>Reservar bicicleta</Button></td>
-            <td><Button variant="light" onClick={liberar1} className={liberado1 === "true" ? "no-clickable" : "clickable"}>Liberar bicicleta</Button></td>
+            <td><Button variant="light" onClick={reservar1} className={alquilado1 === "true" ? "no-clickable" : "clickable"}>Reservar patinete</Button></td>
+            <td><Button variant="light" onClick={liberar1} className={liberado1 === "true" ? "no-clickable" : "clickable"}>Liberar patinete</Button></td>
           </tr>
           <tr>
             <td>2</td>
             <td>Calle Gran Via Nº5</td>
             <td>{estado2}</td>
-            <td><Button variant="light" onClick={reservar2} className={alquilado2 === "true" ? "no-clickable" : "clickable"}>Reservar bicicleta</Button></td>
-            <td><Button variant="light" onClick={liberar2} className={liberado2 === "true" ? "no-clickable" : "clickable"}>Liberar bicicleta</Button></td>
+            <td><Button variant="light" onClick={reservar2} className={alquilado2 === "true" ? "no-clickable" : "clickable"}>Reservar patinete</Button></td>
+            <td><Button variant="light" onClick={liberar2} className={liberado2 === "true" ? "no-clickable" : "clickable"}>Liberar patinete</Button></td>
           </tr>
           <tr>
             <td>3</td>
             <td>Calle Gran Via Nº18</td>
             <td>{estado3}</td>
-            <td><Button variant="light" onClick={reservar3} className={alquilado3 === "true" ? "no-clickable" : "clickable"}>Reservar bicicleta</Button></td>
-            <td><Button variant="light" onClick={liberar3} className={liberado3 === "true" ? "no-clickable" : "clickable"}>Liberar bicicleta</Button></td>
+            <td><Button variant="light" onClick={reservar3} className={alquilado3 === "true" ? "no-clickable" : "clickable"}>Reservar patinete</Button></td>
+            <td><Button variant="light" onClick={liberar3} className={liberado3 === "true" ? "no-clickable" : "clickable"}>Liberar patinete</Button></td>
           </tr>
           <tr>
           <td>4</td>
             <td>Calle Gran Via Nº26</td>
             <td>{estado4}</td>
-            <td><Button variant="light" onClick={reservar4} className={alquilado4 === "true" ? "no-clickable" : "clickable"}>Reservar bicicleta</Button></td>
-            <td><Button variant="light" onClick={liberar4} className={liberado4 === "true" ? "no-clickable" : "clickable"}>Liberar bicicleta</Button></td>
+            <td><Button variant="light" onClick={reservar4} className={alquilado4 === "true" ? "no-clickable" : "clickable"}>Reservar patinete</Button></td>
+            <td><Button variant="light" onClick={liberar4} className={liberado4 === "true" ? "no-clickable" : "clickable"}>Liberar patinete</Button></td>
           </tr>
           <tr>
           <td>5</td>
             <td>Calle Gran Via Nº8</td>
             <td>{estado5}</td>
-            <td><Button variant="light" onClick={reservar5} className={alquilado5 === "true" ? "no-clickable" : "clickable"}>Reservar bicicleta</Button></td>
-            <td><Button variant="light" onClick={liberar5} className={liberado5 === "true" ? "no-clickable" : "clickable"}>Liberar bicicleta</Button></td>
+            <td><Button variant="light" onClick={reservar5} className={alquilado5 === "true" ? "no-clickable" : "clickable"}>Reservar patinete</Button></td>
+            <td><Button variant="light" onClick={liberar5} className={liberado5 === "true" ? "no-clickable" : "clickable"}>Liberar patinete</Button></td>
           </tr>
         </tbody>
       </Table>
