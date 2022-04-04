@@ -177,7 +177,7 @@ export default function Header(props) {
         <Table striped bordered hover variant="dark">
         <thead>
           <tr>
-            <th>Patinete ID</th>
+            <th>Bicicleta ID</th>
             <th>Localización</th>
             <th>Estado</th>
             <th>Reservar</th>
