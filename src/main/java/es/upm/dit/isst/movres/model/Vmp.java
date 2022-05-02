@@ -11,15 +11,17 @@ public class Vmp {
 	private Double longitude;
 	private Boolean locked;
 	private Boolean inUse;
-//	private String code;
+	private Boolean inRep;
 
     protected Vmp (){}
 
-    public Vmp(Double latitude, Double longitude, Boolean locked, Boolean inUse) {
+    
+    public Vmp(Double latitude, Double longitude, Boolean locked, Boolean inUse, Boolean inRep) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.locked = locked;
         this.inUse = inUse;
+        this.setInRep(inRep);
     }
 
     public Integer getId() {
@@ -62,23 +64,35 @@ public class Vmp {
         this.inUse = inUse;
     }
 
+    public Boolean getInRep() {
+        return inRep;
+    }
+
+    public void setInRep(Boolean inRep) {
+        this.inRep = inRep;
+    }
+
+
     @Override
     public String toString() {
-        return "Vmp [id=" + id + ", inUse=" + inUse + ", latitude=" + latitude + ", locked=" + locked + ", longitude="
+        return "Vmp [id=" + id + ", inUse=" + inUse + ", inRep=" + inRep + ", latitude=" + latitude + ", locked=" + locked + ", longitude="
                 + longitude + "]";
     }
+
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((id == null) ? 0 : id.hashCode());
+        result = prime * result + ((inRep == null) ? 0 : inRep.hashCode());
         result = prime * result + ((inUse == null) ? 0 : inUse.hashCode());
         result = prime * result + ((latitude == null) ? 0 : latitude.hashCode());
         result = prime * result + ((locked == null) ? 0 : locked.hashCode());
         result = prime * result + ((longitude == null) ? 0 : longitude.hashCode());
         return result;
     }
+
 
     @Override
     public boolean equals(Object obj) {
@@ -93,6 +107,11 @@ public class Vmp {
             if (other.id != null)
                 return false;
         } else if (!id.equals(other.id))
+            return false;
+        if (inRep == null) {
+            if (other.inRep != null)
+                return false;
+        } else if (!inRep.equals(other.inRep))
             return false;
         if (inUse == null) {
             if (other.inUse != null)
@@ -116,6 +135,4 @@ public class Vmp {
             return false;
         return true;
     }
-
-    
 }
