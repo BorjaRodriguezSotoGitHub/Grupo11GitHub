@@ -5,9 +5,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import es.upm.dit.isst.movres.model.Users;
+import es.upm.dit.isst.movres.model.Admin;
+import es.upm.dit.isst.movres.model.Cliente;
 import es.upm.dit.isst.movres.model.Vmp;
-import es.upm.dit.isst.movres.repository.UsersRepository;
+import es.upm.dit.isst.movres.repository.AdminRepository;
+import es.upm.dit.isst.movres.repository.ClienteRepository;
 import es.upm.dit.isst.movres.repository.VmpRepository;
 
 @SpringBootApplication
@@ -18,7 +20,7 @@ public class MovresApplication {
 	}
 
 	@Bean
-	public CommandLineRunner demo(VmpRepository repository,UsersRepository repository2) {
+	public CommandLineRunner demo(VmpRepository repository, AdminRepository repository2, ClienteRepository repository3) {
 	  return (args) -> {
 		// save a few vmps
 		repository.save(new Vmp(10.5,10.0,false,false,false));
@@ -28,9 +30,11 @@ public class MovresApplication {
 		repository.save(new Vmp(14.5,10.0,false,true,false));
 
 		// save a few admins
-		repository2.save(new Users("danbrown@gmail.com","1234","danbrown","Daniel","Brown Torres",true));
-		repository2.save(new Users("ruben@gmail.com","1234","rubenzm","Ruben","Zafra Martin",true));
+		repository2.save(new Admin("danbrown@gmail.com","1234","danbrown","Daniel","Brown Torres"));
+		repository2.save(new Admin("ruben@gmail.com","1234","rubenzm","Ruben","Zafra Martin"));
 
+		// save a few clientes
+		repository3.save(new Cliente("rodrigo@gmail.com","1234","rodrigo","Rodrigo","Rodrigo"));
 	  };
 	}
 }
