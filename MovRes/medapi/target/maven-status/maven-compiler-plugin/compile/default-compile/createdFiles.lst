@@ -1,0 +1,12 @@
+es\upm\dit\isst\medapi\repository\ConsultaRepository.class
+es\upm\dit\isst\medapi\model\Paciente.class
+es\upm\dit\isst\medapi\controllerWEB\ConsultaControllerWeb.class
+es\upm\dit\isst\medapi\MedapiApplication.class
+es\upm\dit\isst\medapi\repository\PacienteRepository.class
+es\upm\dit\isst\medapi\model\Medico.class
+es\upm\dit\isst\medapi\controllerWEB\KioscoControllerWeb.class
+es\upm\dit\isst\medapi\model\Consulta.class
+es\upm\dit\isst\medapi\repository\MedicoRepository.class
+es\upm\dit\isst\medapi\controllerREST\ConsultaController.class
+es\upm\dit\isst\medapi\controllerREST\PacienteController.class
+es\upm\dit\isst\medapi\controllerREST\MedicoController.class
