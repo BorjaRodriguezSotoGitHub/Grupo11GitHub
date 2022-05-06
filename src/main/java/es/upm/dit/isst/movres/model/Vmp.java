@@ -12,16 +12,18 @@ public class Vmp {
 	private Boolean locked;
 	private Boolean inUse;
 	private Boolean inRep;
+    private Boolean isBike;
 
     protected Vmp (){}
 
     
-    public Vmp(Double latitude, Double longitude, Boolean locked, Boolean inUse, Boolean inRep) {
+    public Vmp(Double latitude, Double longitude, Boolean locked, Boolean inUse, Boolean inRep, Boolean isBike) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.locked = locked;
         this.inUse = inUse;
         this.setInRep(inRep);
+        this.isBike = isBike;
     }
 
     public Integer getId() {
@@ -72,11 +74,19 @@ public class Vmp {
         this.inRep = inRep;
     }
 
+    public Boolean getIsBike() {
+        return isBike;
+    }
+
+
+    public void setIsBike(Boolean isBike) {
+        this.isBike = isBike;
+    }
 
     @Override
     public String toString() {
         return "Vmp [id=" + id + ", inUse=" + inUse + ", inRep=" + inRep + ", latitude=" + latitude + ", locked=" + locked + ", longitude="
-                + longitude + "]";
+                + longitude + ",isBike=" + isBike + "]";
     }
 
 
@@ -87,6 +97,7 @@ public class Vmp {
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         result = prime * result + ((inRep == null) ? 0 : inRep.hashCode());
         result = prime * result + ((inUse == null) ? 0 : inUse.hashCode());
+        result = prime * result + ((isBike == null) ? 0 : isBike.hashCode());
         result = prime * result + ((latitude == null) ? 0 : latitude.hashCode());
         result = prime * result + ((locked == null) ? 0 : locked.hashCode());
         result = prime * result + ((longitude == null) ? 0 : longitude.hashCode());
@@ -118,6 +129,11 @@ public class Vmp {
                 return false;
         } else if (!inUse.equals(other.inUse))
             return false;
+        if (isBike == null) {
+            if (other.isBike != null)
+                return false;
+        } else if (!isBike.equals(other.isBike))
+            return false;
         if (latitude == null) {
             if (other.latitude != null)
                 return false;
@@ -135,4 +151,7 @@ public class Vmp {
             return false;
         return true;
     }
+
+
+    
 }

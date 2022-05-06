@@ -23,15 +23,23 @@ public class MovresApplication {
 	public CommandLineRunner demo(VmpRepository repository, AdminRepository repository2, ClienteRepository repository3) {
 	  return (args) -> {
 		// save a few vmps
-		repository.save(new Vmp(10.5,10.0,false,false,false));
-		repository.save(new Vmp(12.5,10.0,true,false,false));
-		repository.save(new Vmp(10.5,12.0,false,false,false));
-		repository.save(new Vmp(12.5,12.0,false,true,false));
-		repository.save(new Vmp(14.5,10.0,false,true,false));
+		repository.save(new Vmp(10.5,10.0,false,false,false,false));
+		repository.save(new Vmp(12.5,10.0,true,false,false,true));
+		repository.save(new Vmp(10.5,12.0,false,false,false,false));
+		repository.save(new Vmp(12.5,12.0,false,true,false,false));
+		repository.save(new Vmp(14.5,10.0,false,true,false,false));
+		repository.save(new Vmp(10.5,12.0,false,false,false,true));
+		repository.save(new Vmp(10.5,12.0,false,false,false,true));
+		repository.save(new Vmp(10.5,12.0,true,false,false,true));
+		repository.save(new Vmp(10.5,12.0,false,false,true,false));
+		repository.save(new Vmp(10.5,12.0,false,false,false,false));
+		repository.save(new Vmp(10.5,12.0,false,false,false,false));
+		repository.save(new Vmp(10.5,12.0,false,false,false,false));
+		repository.save(new Vmp(10.5,12.0,false,false,true,false));
 
 		// save a few admins
 		repository2.save(new Admin("danbrown@gmail.com","1234","danbrown","Daniel","Brown Torres"));
-		repository2.save(new Admin("ruben@gmail.com","1234","rubenzm","Ruben","Zafra Martin"));
+		repository2.save(new Admin("ruben@gmail.com","1234", "rubenzm","Ruben","Zafra Martin"));
 
 		// save a few clientes
 		repository3.save(new Cliente("rodrigo@gmail.com","1234","rodrigo","Rodrigo","Rodrigo"));
