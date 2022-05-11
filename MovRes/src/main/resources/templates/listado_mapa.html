@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+    <title>Maps JavaScript API</title>
+	<style> 
+  	  #map {
+        height: 100%;
+      }
+     
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+	</style> 
+</head>  
+	<body>
+		<div id ="map"> </div> 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+	<script>
+		
+      var map;
+  	 function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+		  center: {lat: 40.424414, lng: -3.701264},
+          zoom: 15,
+        });
+
+        var marker1 = new google.maps.Marker({
+          position: {lat: 40.425616, lng: -3.705682},
+          map: map,
+	      title: 'VMP 1'
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: {lat: 40.42499119302053, lng: -3.701992313545006},
+          map: map,
+	      title: 'VMP 2'
+        });
+
+        var marker3 = new google.maps.Marker({
+          position: {lat: 40.42322431515842, lng: -3.7028080163647403},
+          map: map,
+	      title: 'VMP 3'
+        });
+
+        var marker4 = new google.maps.Marker({
+          position: {lat: 40.42208957462076, lng: -3.7077480085442676},
+          map: map,
+	      title: 'VMP 4'
+        });
+      }
+      
+	</script>
+
+	</body> 
+</html>

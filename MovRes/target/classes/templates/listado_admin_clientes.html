@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <link rel="icon" type="image/ico" th:href="@{/img/favicon.ico}" />
+        <title>Movilidad Responsable (Admin)</title>
+        <link rel = "stylesheet" type= "text/css" th:href="@{/css/Listado.css}">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <a th:href="@{/movres/saliradmin}"><button class="button" >Salir</button></a>
+        <button class="button" onclick="history.back()">Listado VMPs</button>
+        <img id="logo" class="h-100 d-inline-block" th:src="@{../../img/movres_icon.png}" />
+        <h2 class="titulo" align="center">Lista de Usuarios Registrados</h2>
+
+        <div class="row">
+            <table id="pacientes" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Usuario</th>
+                        <th class="text-center">Nombre</th>
+                        <th class="text-center">Apellido</th>
+                        <th class="text-center">Banear</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="Listado: ${listaClientes}">
+                        <td th:text="${Listado.email}"></td>
+                        <td th:text="${Listado.usuario}"></td>     
+                        <td th:text="${Listado.nombre}"></td>     
+                        <td th:text="${Listado.apellidos}"></td>  
+                        <td><a th:href="@{/movres/elimina/} + ${Listado.email}"><button class="button2" >Banear Usuario</button></a></td>  
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <h3>Movilidad Responsable</h3>
+                <p class="fop">Términos y condiciones | Política de privacidad | Política de cookies | Aviso Legal </p>
+            </div>
+        </footer>
+    </body>
+
+</html>

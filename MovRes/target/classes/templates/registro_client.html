@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="icon" type="image/ico" th:href="@{/img/favicon.ico}" />
+        <title>Movilidad Responsable</title>
+        <link rel = "stylesheet" type= "text/css" th:href="@{/css/Registro.css}">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="main">
+            <p class="sign" align="center">Movilidad Responsable</p>
+            <img th:src="@{../../img/movres_icon.png}"/>
+            <form class="form1" th:action="@{/movres/crear}" method="post"> <!--Esto es equivalente al PostMappping-->
+                <div>    
+                    <input class="un " align="center" id="email" type="text" name="email" placeholder="Email">
+                </div>
+                <div>
+                    <input class="pass" align="center" id="contraseña" type="password" name="contraseña" placeholder="Contraseña">
+                </div>
+                <div>
+                    <input class="pass" align="center" id="usuario" type="user" name="usuario" placeholder="Usuario">
+                </div>
+                <div>
+                    <input class="pass" align="center" id="nombre" type="user" name="nombre" placeholder="Nombre">
+                </div>
+                <div>
+                    <input class="pass" align="center" id="apellidos" type="user" name="apellidos" placeholder="Apellido">
+                </div>
+                <input class="submit" align="center" id="enter" type="submit" value="Registrar Usuario">
+            </form>
+            </div>
+            <footer>
+                <div class="footer-content">
+                    <h3>Movilidad Responsable</h3>
+                    <p class="fop">Términos y condiciones | Política de privacidad | Política de cookies | Aviso Legal </p>
+                </div>
+            </footer>
+    </body>
+</html>
